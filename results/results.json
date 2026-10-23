@@ -1,0 +1,245 @@
+{
+ "seed": 42,
+ "tests": [
+  {
+   "Claim": "Toss winner wins the match (vs 50%)",
+   "Test": "Binomial",
+   "Effect": "50.8%",
+   "95% CI": "47.9 to 53.8",
+   "p (Holm)": "0.61",
+   "Verdict": "No clear evidence"
+  },
+  {
+   "Claim": "Chasing team wins (vs 50%)",
+   "Test": "Binomial",
+   "Effect": "54.1%",
+   "95% CI": "51.2 to 57.1",
+   "p (Holm)": "0.028",
+   "Verdict": "Real effect"
+  },
+  {
+   "Claim": "CSK win rate: Chepauk minus elsewhere",
+   "Test": "Fisher exact",
+   "Effect": "+17.4 pts",
+   "95% CI": "+4.3 to +30.3",
+   "p (Holm)": "0.044",
+   "Verdict": "Real effect"
+  },
+  {
+   "Claim": "Any team wins at own home ground (vs 50%)",
+   "Test": "Binomial",
+   "Effect": "56.5%",
+   "95% CI": "52.5 to 60.4",
+   "p (Holm)": "0.0075",
+   "Verdict": "Real effect"
+  },
+  {
+   "Claim": "Batting-first win rate: Chepauk minus elsewhere",
+   "Test": "Permutation",
+   "Effect": "+12.8 pts",
+   "95% CI": "+1.7 to +23.8",
+   "p (Holm)": "0.047",
+   "Verdict": "Real effect"
+  },
+  {
+   "Claim": "First-innings score: 2023-24 minus 2008-22",
+   "Test": "Mann-Whitney",
+   "Effect": "+23.1 runs",
+   "95% CI": "+17.0 to +29.1",
+   "p (Holm)": "1e-12",
+   "Verdict": "Real effect"
+  }
+ ],
+ "models": [
+  {
+   "Model": "Coin flip",
+   "accuracy": 0.5138888888888888,
+   "log_loss": 0.6931471805599453,
+   "brier": 0.25
+  },
+  {
+   "Model": "Better record so far",
+   "accuracy": 0.5694444444444444,
+   "log_loss": 0.6842368835240467,
+   "brier": 0.24555555555555555
+  },
+  {
+   "Model": "Back the home team",
+   "accuracy": 0.5069444444444444,
+   "log_loss": 0.6944418697662065,
+   "brier": 0.2506423611111111
+  },
+  {
+   "Model": "Elo only",
+   "accuracy": 0.5208333333333334,
+   "log_loss": 0.694130879848981,
+   "brier": 0.25049033582312485
+  },
+  {
+   "Model": "Logistic regression",
+   "accuracy": 0.5208333333333334,
+   "log_loss": 0.7041354354935867,
+   "brier": 0.255357650687913
+  },
+  {
+   "Model": "Gradient boosting",
+   "accuracy": 0.5069444444444444,
+   "log_loss": 0.7085483274212239,
+   "brier": 0.2572514628543073
+  }
+ ],
+ "boot": [
+  {
+   "Model": "Better record so far",
+   "Accuracy": "56.9%",
+   "Accuracy 95% CI": "49% to 65%",
+   "Log-loss gain vs coin": "+0.009",
+   "Gain 95% CI": "-0.008 to +0.024"
+  },
+  {
+   "Model": "Elo only",
+   "Accuracy": "52.1%",
+   "Accuracy 95% CI": "44% to 60%",
+   "Log-loss gain vs coin": "-0.001",
+   "Gain 95% CI": "-0.008 to +0.006"
+  },
+  {
+   "Model": "Logistic regression",
+   "Accuracy": "52.1%",
+   "Accuracy 95% CI": "44% to 60%",
+   "Log-loss gain vs coin": "-0.011",
+   "Gain 95% CI": "-0.035 to +0.012"
+  },
+  {
+   "Model": "Gradient boosting",
+   "Accuracy": "50.7%",
+   "Accuracy 95% CI": "42% to 59%",
+   "Log-loss gain vs coin": "-0.015",
+   "Gain 95% CI": "-0.048 to +0.015"
+  }
+ ],
+ "wf_ll": {
+  "Better record so far": {
+   "2016": 0.6864,
+   "2017": 0.6879,
+   "2018": 0.6714,
+   "2019": 0.6999,
+   "2020": 0.7049,
+   "2021": 0.6948,
+   "2022": 0.7062,
+   "2023": 0.6748,
+   "2024": 0.6939
+  },
+  "Coin flip": {
+   "2016": 0.6931,
+   "2017": 0.6931,
+   "2018": 0.6931,
+   "2019": 0.6931,
+   "2020": 0.6931,
+   "2021": 0.6931,
+   "2022": 0.6931,
+   "2023": 0.6931,
+   "2024": 0.6931
+  },
+  "Elo only": {
+   "2016": 0.694,
+   "2017": 0.6892,
+   "2018": 0.6899,
+   "2019": 0.6939,
+   "2020": 0.6936,
+   "2021": 0.6906,
+   "2022": 0.7009,
+   "2023": 0.6897,
+   "2024": 0.6987
+  },
+  "Gradient boosting": {
+   "2016": 0.7567,
+   "2017": 0.6881,
+   "2018": 0.668,
+   "2019": 0.6994,
+   "2020": 0.693,
+   "2021": 0.7018,
+   "2022": 0.7309,
+   "2023": 0.7164,
+   "2024": 0.7139
+  },
+  "Logistic regression": {
+   "2016": 0.6922,
+   "2017": 0.6831,
+   "2018": 0.6665,
+   "2019": 0.6735,
+   "2020": 0.7014,
+   "2021": 0.6829,
+   "2022": 0.7141,
+   "2023": 0.723,
+   "2024": 0.691
+  }
+ },
+ "wf_pooled": [
+  {
+   "model": "Coin flip",
+   "n": 576,
+   "log_loss": 0.6931471805599454,
+   "accuracy": 0.484375
+  },
+  {
+   "model": "Better record so far",
+   "n": 576,
+   "log_loss": 0.6911284488264059,
+   "accuracy": 0.5347222222222222
+  },
+  {
+   "model": "Elo only",
+   "n": 576,
+   "log_loss": 0.6933908208830046,
+   "accuracy": 0.5243055555555556
+  },
+  {
+   "model": "Logistic regression",
+   "n": 576,
+   "log_loss": 0.6919672712828668,
+   "accuracy": 0.546875
+  },
+  {
+   "model": "Gradient boosting",
+   "n": 576,
+   "log_loss": 0.7075662242759008,
+   "accuracy": 0.5243055555555556
+  }
+ ],
+ "calibration": [
+  {
+   "predicted": 0.3214,
+   "actual": 0.3,
+   "n": 10
+  },
+  {
+   "predicted": 0.4116,
+   "actual": 0.5124,
+   "n": 121
+  },
+  {
+   "predicted": 0.4987,
+   "actual": 0.4949,
+   "n": 297
+  },
+  {
+   "predicted": 0.5853,
+   "actual": 0.5845,
+   "n": 142
+  },
+  {
+   "predicted": 0.6683,
+   "actual": 0.3333,
+   "n": 6
+  }
+ ],
+ "coefs": {
+  "form_diff": -0.0761,
+  "toss_a": 0.0357,
+  "career_diff": 0.0536,
+  "bat_first_edge": 0.0975,
+  "elo_diff": 0.128,
+  "home_diff": 0.219
+ }
+}
